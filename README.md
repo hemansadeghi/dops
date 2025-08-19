@@ -1,14 +1,18 @@
 # Mini DevOps Tools - Backup & Restore
 
-A simple DevOps utility written in **Bash** for creating and restoring backups.  
-It includes two scripts:
-
-- `backup.sh` → Create compressed backups (`tar.gz`) from multiple directories.  
-- `restore.sh` → Restore a backup into a given directory.  
-
-All operations are logged both to a **log file** and to **syslog**.
+A lightweight **DevOps utility in Bash** for creating and restoring compressed backups.  
+It’s designed to be **simple, reliable, and easy to integrate** into your workflow.
 
 ---
+
+
+## ✨ Features
+- 📦 **Backup** multiple directories into a single `.tar.gz` file  
+- 🔄 **Restore** from backups with one command  
+- 📝 Logs to both a file (`/var/log/mini-devops-backup.log`) and **syslog** (`journalctl`)  
+- 🐚 100% Bash, no external dependencies (besides `tar` & `logger`)  
+ ---
+
 
 ## 🚀 Installation
 
@@ -97,3 +101,12 @@ Both scripts log events into:
 - Auto-clean old backups (rotation).  
 - Systemd service & timer for automated daily backups.  
 - Remote backup (e.g. rsync to another server or cloud storage).
+
+
+ ---
+ 👤 Author
+
+Created and maintained by Heman Sadeghi
+
+If you find this project useful, please ⭐ the repository and feel free to contribute via pull requests.
+For bug reports, feature requests, or discussions, open an issue
